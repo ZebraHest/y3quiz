@@ -1,0 +1,63 @@
+"et maskindrevet skib","et maskindrevet skib, der slæber","et maskindrevet skib, der slæber, og slæbet er over 200 m","et sejlskib","beskæftiget med trawlfiskeri","beskæftiget med fiskeri, bortset fra trawlfiskeri","ikke under kommando","begrænset i sin manøvreevne","hæmmet af sin dybgang",¨"beskæftiget med lodstjeneste","en ankerligger","stødt på grund","beskæftiget med minerydning","beskæftiget med uddybningsarbejde","let","gør fart gennem vandet","under 50 m i længde","set mod dets styrbords side","set mod dets bagbords side","set ret for fra","set agter fra"
+
+
+function displayLightAnswer(){
+  var pic = questionBank[questionNumber].picture;
+  $(stage).append('<div id= "pix" class = "pix"><img src="img/'+pic+'"></div>')
+
+  $(stage).append('<div class = "questionText">' +questionBank[questionNumber].picture+'</div>')
+
+  $(stage).append('<div class = "submit"> Svar </div>');
+
+  $('.submit').click(function(){
+    submitFunction()
+  });
+}
+
+
+
+  function submitFunction(){
+    if(stage == "#game1"){
+      stage2 = "#game1";
+      stage = "#game2";
+    }else{
+      stage2 = "#game2";
+      stage = "#game1";
+    }
+  //  displayLightAnswer();
+
+    $(stage2).animate({"right":"+=800px"} , "slow", function() {
+      $(stage2).css('right' , '-800px');
+      $(stage2).empty();
+    })
+    $(stage).animate({"right":"+=800px"} , "slow", function(){questionLock = false;});
+  }
+
+  function changeQuestion(){
+    questionNumber++;
+
+    if(stage == "#game1"){
+      stage2 = "#game1";
+      stage = "#game2";
+    }else{
+      stage2 = "#game2";
+      stage = "#game1";
+    }
+    if(questionNumber < numberOfQuestions){
+      displayLightQuestion();
+    }else{
+      displayFinalSlide();
+    }
+
+    $(stage2).animate({"right":"+=800px"} , "slow", function() {
+      $(stage2).css('right' , '-800px');
+      $(stage2).empty();
+    })
+    $(stage).animate({"right":"+=800px"} , "slow", function(){questionLock = false;});
+  }
+
+  function displayFinalSlide(){
+
+    $(stage).append('<div class="questionText">You have finished the quiz!<br><br>Total questions: '+numberOfQuestions+'<br>Correct answers: '+score+'</div>');
+
+  }
