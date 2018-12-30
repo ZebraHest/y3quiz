@@ -1,0 +1,80 @@
+{"list":[
+  {
+    "type":"fog",
+    "description": "Maskindrevet skib, der gør fart gennem vandet.",
+    "sound":[true, false, false, false,
+            false, false, false, false],
+    "period":[false, true]
+  },
+  {
+    "type":"fog",
+    "description": "Maskindrevet skib, der er let, og som ligger stoppet uden at gøre fart gennem vandet.",
+    "sound":[false, true, false, false,
+            false, false, false, false],
+    "period":[false, true]
+  },
+  {
+    "type":"fog",
+    "description": "Skib, der ikke er under kommando, og som gør fart gennem vandet.",
+    "sound":[false, false, true, false,
+            false, false, false, false],
+    "period":[false, true]
+  },
+  {
+    "type":"fog",
+    "description": "Skib der er begrænset i sin evne til at manøvrere, og som ligger stoppet uden at gøre fart gennem vandet.",
+    "sound":[false, false, true, false,
+            false, false, false, false],
+    "period":[false, true]
+  },
+  {
+    "type":"fog",
+    "description": "Skib, der er beskæftiget med trawlfiskeri, og som ligger stoppet uden at gøre fart gennem vandet.",
+    "sound":[false, false, true, false,
+            false, false, false, false],
+    "period":[false, true]
+  },
+  {
+    "type":"fog",
+    "description": "Skib, der er i færd med at slæbe.",
+    "sound":[false, false, true, false,
+            false, false, false, false],
+    "period":[false, true]
+  },
+  {
+    "type":"fog",
+    "description": "Et skib, der slæbes, og som er bemandet.",
+    "sound":[false, false, false, true,
+            false, false, false, false],
+    "period":[false, true]
+  },
+  {
+    "type":"fog",
+    "description": "Et skib, der er hæmmet af sin dybgang.",
+    "sound":[false, false, true, false,
+            false, false, false, false],
+    "period":[false, true]
+  },
+  {
+    "type":"fog",
+    "description": "Et skib til ankers, som er over 100 m i længde.",
+    "sound":[false, false, false, false,
+            false, false, false, true],
+    "period":[true, false]
+  },
+  {
+    "type":"fog",
+    "description": "Sejlskib, der er let.",
+    "sound":[false, false, true, false,
+            false, false, false, false],
+    "period":[false, true]
+  },
+  {
+    "type":"fog",
+    "description": "Et skib, der er beskæftiget med at fiske, bortset fra trawlfiskeri, og som gør fart gennem vandet. ",
+    "sound":[false, false, true, false,
+            false, false, false, false],
+    "period":[false, true]
+  }
+]
+}

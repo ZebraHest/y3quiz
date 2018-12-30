@@ -36,6 +36,13 @@ html, body {
   font-size: 22px;
   color: #FFF;
 }
+
+.smallQuestionText{
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: underline;
+}
+
 .submit{
   width: 80px;
   height: 30px;
@@ -65,6 +72,19 @@ html, body {
   width: 800px;
   border-bottom: solid white 1px;
 }
+
+#bottombar{
+  height: 50px;
+  margin: auto;
+  margin-top: 50px;
+  color: #FFF;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  text-align: right;
+  bottom: 0;
+}
+
 .spacer{
   height: 30px;
 }

@@ -1,5 +1,6 @@
 {"list":[
   {
+    "type":"light",
     "picture": "Slide1.png",
     "answerList":[true, false, false, false, false,
                   false, false, false, false, false,
@@ -9,6 +10,7 @@
     "description":"Et maskindrevet skib, der er let, under 50 m i længde, set mod dets styrbords side"
   },
   {
+    "type":"light",
     "picture": "Slide2.png",
     "answerList":[true, false, false, false, false,
                   false, false, false, false, false,
@@ -18,6 +20,7 @@
     "description":"Et maskindrevet skib, der er let, under 50 m i længde, set mod dets bagbords side"
   },
   {
+    "type":"light",
     "picture": "Slide3.png",
     "answerList":[true, false, false, false, false,
                   false, false, false, false, false,
@@ -27,6 +30,7 @@
     "description":"Et maskindrevet skib, der er let, under 50 m i længde, set ret for fra"
   },
   {
+    "type":"light",
     "picture": "Slide4.png",
     "answerList":[true, false, false, false, false,
                   false, false, false, false, false,
@@ -36,6 +40,7 @@
     "description":"Et maskindrevet skib, der er let, set mod dets styrbords side"
   },
   {
+    "type":"light",
     "picture": "Slide5.png",
     "answerList":[true, false, false, false, false,
                   false, false, false, false, false,
@@ -45,6 +50,7 @@
     "description":"Dt maskindrevet skib, der er let, set mod dets bagbords side"
   },
   {
+    "type":"light",
     "picture": "Slide6.png",
     "answerList":[false, true, false, false, false,
                   false, false, false, false, false,
@@ -54,6 +60,7 @@
     "description":"Et maskindrevet skib, der slæber, der er let, under 50 m i længde, set mod dets styrbords side"
   },
   {
+    "type":"light",
     "picture": "Slide7.png",
     "answerList":[false, true, false, false, false,
                   false, false, false, false, false,
@@ -63,6 +70,7 @@
     "description":"Et maskindrevet skib, der slæber, der er let, set mod dets styrbords side"
   },
   {
+    "type":"light",
     "picture": "Slide8.png",
     "answerList":[false, false, true, false, false,
                   false, false, false, false, false,
@@ -72,6 +80,7 @@
     "description":"Et maskindrevet skib, der slæber, og slæbet er over 200 m, let, set mod dets styrbords side"
   },
   {
+    "type":"light",
     "picture": "Slide9.png",
     "answerList":[false, false, true, false, false,
                   false, false, false, false, false,
@@ -81,6 +90,7 @@
     "description":"Et maskindrevet skib, der slæber, og slæbet er over 200 m, let, under 50 m i længde, set mod dets bagbords side"
   },
   {
+    "type":"light",
     "picture": "Slide10.png",
     "answerList":[false, true, false, false, false,
                   false, false, false, false, false,
@@ -90,6 +100,7 @@
     "description":"Et maskindrevet skib, der slæber, let, set agter fra"
   },
   {
+    "type":"light",
     "picture": "Slide11.png",
     "answerList":[false, false, false, true, false,
                   false, false, false, false, false,
@@ -99,6 +110,7 @@
     "description":"Et sejlskib, let, set agter fra"
   },
   {
+    "type":"light",
     "picture": "Slide12.png",
     "answerList":[false, false, false, true, false,
                   false, false, false, false, false,
@@ -108,6 +120,7 @@
     "description":"Et sejlskib, let, set mod dets styrbords side"
   },
   {
+    "type":"light",
     "picture": "Slide13.png",
     "answerList":[false, false, false, true, false,
                   false, false, false, false, false,
@@ -117,6 +130,7 @@
     "description":"Et sejlskib, let, set mod dets bagbords side"
   },
   {
+    "type":"light",
     "picture": "Slide14.png",
     "answerList":[false, false, false, true, false,
                   false, false, false, false, false,
@@ -126,6 +140,7 @@
     "description":"Et sejlskib, let, set mod dets bagbords side"
   },
   {
+    "type":"light",
     "picture": "Slide15.png",
     "answerList":[false, false, false, false, true,
                   false, false, false, false, false,
@@ -135,6 +150,7 @@
     "description":"Beskæftiget med trawlfiskeri"
   },
   {
+    "type":"light",
     "picture": "Slide16.png",
     "answerList":[false, false, false, false, true,
                   false, false, false, false, false,
@@ -144,6 +160,7 @@
     "description":"Beskæftiget med trawlfiskeri, gør fart gennem vandet, set agter fra"
   },
   {
+    "type":"light",
     "picture": "Slide17.png",
     "answerList":[false, false, false, false, true,
                   false, false, false, false, false,
@@ -153,6 +170,7 @@
     "description":"Beskæftiget med trawlfiskeri, gør fart gennem vandet, under 50 m i længde, set mod dets styrbords side"
   },
   {
+    "type":"light",
     "picture": "Slide18.png",
     "answerList":[false, false, false, false, true,
                   false, false, false, false, false,
@@ -162,6 +180,7 @@
     "description":"beskæftiget med trawlfiskeri, gør fart gennem vandet, set mod dets bagbords side"
   },
   {
+    "type":"light",
     "picture": "Slide19.png",
     "answerList":[false, false, false, false, false,
                   true, true, false, false, false,
@@ -171,6 +190,7 @@
     "description":"beskæftiget med fiskeri, bortset fra trawlfiskeri"
   },
   {
+    "type":"light",
     "picture": "Slide20.png",
     "answerList":[false, false, false, false, false,
                   true, false, false, false, false,
@@ -180,6 +200,7 @@
     "description":"beskæftiget med fiskeri, bortset fra trawlfiskeri, gør fart gennem vandet, set mod dets bagbords side"
   },
   {
+    "type":"light",
     "picture": "Slide21.png",
     "answerList":[false, false, false, false, false,
                   true, false, false, false, false,
@@ -189,6 +210,7 @@
     "description":"beskæftiget med fiskeri, bortset fra trawlfiskeri, gør fart gennem vandet, set ret for fra"
   },
   {
+    "type":"light",
     "picture": "Slide22.png",
     "answerList":[false, false, false, false, false,
                   true, false, false, false, false,
@@ -198,6 +220,7 @@
     "description":"beskæftiget med fiskeri, bortset fra trawlfiskeri, gør fart gennem vandet, set ret for fra"
   },
   {
+    "type":"light",
     "picture": "Slide23.png",
     "answerList":[false, false, false, false, false,
                   true, false, false, false, false,
@@ -207,6 +230,7 @@
     "description":"beskæftiget med fiskeri, bortset fra trawlfiskeri, gør fart gennem vandet, set agter fra"
   },
   {
+    "type":"light",
     "picture": "Slide24.png",
     "answerList":[false, false, false, false, false,
                   false, true, false, false, false,
@@ -216,6 +240,7 @@
     "description":"ikke under kommando, let"
   },
   {
+    "type":"light",
     "picture": "Slide25.png",
     "answerList":[false, false, false, false, false,
                   false, true, false, false, false,
@@ -225,6 +250,7 @@
     "description":"ikke under kommando, gør fart gennem vandet, set mod dets bagbords side"
   },
   {
+    "type":"light",
     "picture": "Slide26.png",
     "answerList":[false, false, false, false, false,
                   false, true, false, false, false,
@@ -234,6 +260,7 @@
     "description":"ikke under kommando, gør fart gennem vandet, set agter fra"
   },
   {
+    "type":"light",
     "picture": "Slide27.png",
     "answerList":[false, false, false, false, false,
                   false, false, true, false, false,
@@ -243,6 +270,7 @@
     "description":"begrænset i sin manøvreevne, let"
   },
   {
+    "type":"light",
     "picture": "Slide28.png",
     "answerList":[true, false, false, false, false,
                   false, false, true, false, false,
@@ -252,6 +280,7 @@
     "description":"et maskindrevet skib, begrænset i sin manøvreevne, gør fart gennem vandet, under 50 m i længde, set mod dets styrbords side"
   },
   {
+    "type":"light",
     "picture": "Slide29.png",
     "answerList":[true, false, false, false, false,
                   false, false, true, false, false,
@@ -261,6 +290,7 @@
     "description":"et maskindrevet skib, begrænset i sin manøvreevne, gør fart gennem vandet, set mod dets styrbords side"
   },
   {
+    "type":"light",
     "picture": "Slide30.png",
     "answerList":[true, false, false, false, false,
                   false, false, true, false, false,
@@ -270,6 +300,7 @@
     "description":"et maskindrevet skib, begrænset i sin manøvreevne, gør fart gennem vandet, set agter fra"
   },
   {
+    "type":"light",
     "picture": "Slide31.png",
     "answerList":[false, false, false, false, false,
                   false, false, true, false, false,
@@ -279,6 +310,7 @@
     "description":"begrænset i sin manøvreevne, en ankerligger, set mod dets bagbords side"
   },
   {
+    "type":"light",
     "picture": "Slide32.png",
     "answerList":[false, false, true, false, false,
                   false, false, true, false, false,
@@ -288,6 +320,7 @@
     "description":"et maskindrevet skib, der slæber, og slæbet er over 200 m, begrænset i sin manøvreevne, gør fart gennem vandet, set mod dets styrbords side"
   },
   {
+    "type":"light",
     "picture": "Slide33.png",
     "answerList":[false, false, false, false, false,
                   false, false, false, false, false,
@@ -297,6 +330,7 @@
     "description":"beskæftiget med uddybningsarbejde"
   },
   {
+    "type":"light",
     "picture": "Slide34.png",
     "answerList":[false, false, false, false, false,
                   false, false, false, false, false,
@@ -306,6 +340,7 @@
     "description":"beskæftiget med uddybningsarbejde, gør fart gennem vandet, set agter fra"
   },
   {
+    "type":"light",
     "picture": "Slide35.png",
     "answerList":[true, false, false, false, false,
                   false, false, false, false, false,
@@ -315,6 +350,7 @@
     "description":"et maskindrevet skib, beskæftiget med uddybningsarbejde, gør fart gennem vandet, set ret for fra"
   },
   {
+    "type":"light",
     "picture": "Slide36.png",
     "answerList":[true, false, false, false, false,
                   false, false, false, false, false,
@@ -324,6 +360,7 @@
     "description":"et maskindrevet skib, beskæftiget med uddybningsarbejde, gør fart gennem vandet, under 50 m i længde, set ret for fra"
   },
   {
+    "type":"light",
     "picture": "Slide37.png",
     "answerList":[true, false, false, false, false,
                   false, false, false, false, false,
@@ -333,6 +370,7 @@
     "description":"et maskindrevet skib, beskæftiget med minerydning, let, under 50 m i længde, set ret for fra"
   },
   {
+    "type":"light",
     "picture": "Slide38.png",
     "answerList":[true, false, false, false, false,
                   false, false, false, false, false,
@@ -342,6 +380,7 @@
     "description":"et maskindrevet skib, beskæftiget med minerydning, let, set agter fra"
   },
   {
+    "type":"light",
     "picture": "Slide39.png",
     "answerList":[true, false, false, false, false,
                   false, false, false, true, false,
@@ -351,6 +390,7 @@
     "description":"et maskindrevet skib, hæmmet af sin dybgang, let, set mod dets styrbords side"
   },
   {
+    "type":"light",
     "picture": "Slide40.png",
     "answerList":[true, false, false, false, false,
                   false, false, false, true, false,
@@ -360,6 +400,7 @@
     "description":"et maskindrevet skib, hæmmet af sin dybgang, let, under 50 m i længde, set ret for fra"
   },
   {
+    "type":"light",
     "picture": "Slide41.png",
     "answerList":[false, false, false, false, false,
                   false, false, false, false, true,
@@ -369,6 +410,7 @@
     "description":"beskæftiget med lodstjeneste, let, set mod dets bagbords side"
   },
   {
+    "type":"light",
     "picture": "Slide42.png",
     "answerList":[false, false, false, false, false,
                   false, false, false, false, true,
@@ -378,6 +420,7 @@
     "description":"beskæftiget med lodstjeneste, let, set ret for fra"
   },
   {
+    "type":"light",
     "picture": "Slide43.png",
     "answerList":[false, false, false, false, false,
                   false, false, false, false, false,
@@ -387,6 +430,7 @@
     "description":"en ankerligger, set mod dets styrbords side"
   },
   {
+    "type":"light",
     "picture": "Slide44.png",
     "answerList":[false, false, false, false, false,
                   false, false, false, false, false,
