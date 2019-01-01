@@ -1,12 +1,5 @@
-Maskindrevet skib, der gør fart gennem vandet.
-
-Maskindrevet skib, der er let, og som ligger stoppet uden at gøre fart gennem vandet.
-Skib, der ikke er under kommando, og som gør fart gennem vandet.
-Skib der er begrænset i sin evne til at manøvrere, og som ligger stoppet uden at gøre fart gennem vandet.
-Skib, der er beskæftiget med trawlfiskeri, og som ligger stoppet uden at gøre fart gennem vandet.
-Skib, der er i færd med at slæbe.
-Et skib, der slæbes, og som er bemandet.
-Et skib, der er hæmmet af sin dybgang.
-Et skib til ankers, som er over 100 m i længde.
-Sejlskib, der er let.
-Et skib, der er beskæftiget med at fiske, bortset fra trawlfiskeri, og som gør fart gennem vandet.
+simple -> name
+kort -> name
+lightText -> simple
+lightPic -> simple
+name -> simple

@@ -1,0 +1,99 @@
+{"list":[
+  {
+    "type":"buoy",
+    "name":"Styrbords Sideafmærkning",
+    "simplePicture":"1.1_styrbordsafmaerkning.png",
+    "map":"1.1.2_styrbordsafmaerkning_soekort.png",
+    "lightText":["LFl.G", "Fl.G"],
+    "lightPicture":["1.1.3_styrbordsafmaerkning_fyr1.png","1.1.9_styrbordsafmaerkning_fyr7.png"]
+  },
+  {
+    "type":"buoy",
+    "name":"Bagbords Sideafmærkning",
+    "simplePicture":"1.2_bagbordsafmaerkning.png",
+    "map":"1.2.2_bagbordsafmaerkning_soekort.png",
+    "lightText":["LFl.R","Fl.R"],
+    "lightPicture":["1.2.3_bagbordsafmaerkning_fyr1.png","1.2.9_bagbordsafmaerkning_fyr7.png"]
+  },
+  {
+    "type":"buoy",
+    "name":"Isoleret Fareafmærkning",
+    "simplePicture":"1.3_isoleretfareafmaerkning.png",
+    "map":"1.3.2_isoleretfareafmaerkning_soekort.png",
+    "lightText":["Fl(2)"],
+    "lightPicture":["1.3.3_isoleretfareafmaerkning_fyr1.png"]
+  },
+  {
+    "type":"buoy",
+    "name":"Special Afmærkning",
+    "simplePicture":"1.4_specialafmaerkning.png",
+    "map":"1.4.2_specialafmaerkning_soekort.png",
+    "lightText":["Fl.Y"],
+    "lightPicture":["1.4.4_specialafmaerkning_fyr2.png"]
+  },
+  {
+    "type":"buoy",
+    "name":"Midtfarvands Afmærkning",
+    "simplePicture":"1.5_midtfarvandsafmaerkning.png",
+    "map":"1.5.2_midtfarvandsafmaerkning_soekort.png",
+    "lightText":["iso", "LFl"],
+    "lightPicture":["1.5.4_midtfarvandsafmaerkning_fyr2.png","1.5.6_midtfarvandsafmaerkning_fyr4.png"]
+  },
+  {
+    "type":"buoy",
+    "name":"Vrag Afmærkning",
+    "simplePicture":"1.6_vragafmaerkning.png",
+    "map":"",
+    "lightText":["Al.Fl.Bu.Y"],
+    "lightPicture":["1.6.2_midtfarvandsafmaerkning_fyr1.png"]
+  },
+  {
+    "type":"buoy",
+    "name":"Styrbords Skillepunktsafmærkning",
+    "simplePicture":"1.7_styrbordskillepunktsafmaerkning.png",
+    "map":"1.7.2_styr_skille_afmaerkning_soekort.png",
+    "lightText":["Fl(2+1).G"],
+    "lightPicture":["1.7.3_styr_skille_afmaerkning_fyr1.png"]
+  },
+  {
+    "type":"buoy",
+    "name":"Bagbords Skillepunktsafmærkning",
+    "simplePicture":"1.8_bagbordskillepunktsafmaerkning.png",
+    "map":"1.8.2_bag_skille_afmaerkning_soekort.png",
+    "lightText":["Fl(2+1).R"],
+    "lightPicture":["1.8.3_bag_skille_afmaerkning_fyr1.png"]
+  },
+  {
+    "type":"buoy",
+    "name":"Nord Kompasafmærkning",
+    "simplePicture":"1.9_nordkompasafmaerkning.png",
+    "map":"1.9.2_Nord_kompasafmaerkning_soekort.png",
+    "lightText":["Q","VQ"],
+    "lightPicture":["1.9.3_nord_kompasafmaerkning_fyr1.png","1.9.4_nord_kompasafmaerkning_fyr2.png"]
+  },
+  {
+    "type":"buoy",
+    "name":"Syd Kompasafmærkning",
+    "simplePicture":"1.10_sydkompasafmaerkning.png",
+    "map":"1.10.2_syd_kompasafmaerkning_soekort.png",
+    "lightText":["Q(6).LFl","VQ(6).Fl"],
+    "lightPicture":["1.10.3_syd_kompasafmaerkning_fyr1.png","1.10.4_syd_kompasafmaerkning_fyr2.png"]
+  },
+  {
+    "type":"buoy",
+    "name":"Øst Kompasafmærkning",
+    "simplePicture":"1.11_oestkompasafmaerkning.png",
+    "map":"1.11.2_oest_kompasafmaerkning_soekort.png",
+    "lightText":["Q(3)","VQ(3)"],
+    "lightPicture":["1.11.3_oest_kompasafmaerkning_fyr1.png","1.11.4_oest_kompasafmaerkning_fyr2.png"]
+  },
+  {
+    "type":"buoy",
+    "name":"Vest Kompasafmærkning",
+    "simplePicture":"1.12_vestkompasafmaerkning.png",
+    "map":"1.12.2_vest_kompasafmaerkning_soekort.png",
+    "lightText":["Q(9)","VQ(9)"],
+    "lightPicture":["1.12.3_vest_kompasafmaerkning_fyr1.png","1.12.4_vest_kompasafmaerkning_fyr2.png"]
+  }
+]
+}

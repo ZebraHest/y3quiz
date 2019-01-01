@@ -9,9 +9,9 @@ $(document).ready(function() {
   var lightAnswers = ["et maskindrevet skib","et maskindrevet skib, der slæber","et maskindrevet skib, der slæber, og slæbet er over 200 m","et sejlskib","beskæftiget med trawlfiskeri","beskæftiget med fiskeri, bortset fra trawlfiskeri","ikke under kommando","begrænset i sin manøvreevne","hæmmet af sin dybgang","beskæftiget med lodstjeneste","en ankerligger","stødt på grund","beskæftiget med minerydning","beskæftiget med uddybningsarbejde","let","gør fart gennem vandet","under 50 m i længde","set mod dets styrbords side","set mod dets bagbords side","set ret for fra","set agter fra"];
   var fogSoundAnswers = ["-", "--", "-..", "-...", "..-", "....","Klokke, 5 sek", "Klokke 5 sek + gongong 5 sek"];
   var fogPeriodAnswers = ["1 min", "2 min"];
+  var buoys = new Array();
 
-  var test = [true, 2, "hest"];
-
+  /*
   $.getJSON('lightQuestion.json', function(data) {
     for(i=0; i < data.list.length; i++){
       questionBank.push(data.list[i]);
@@ -22,10 +22,42 @@ $(document).ready(function() {
   })//getJSON
 
   $.getJSON('fogQuestion.json', function(data) {
-    var length = questionBank.length;
     for(i=0; i < data.list.length; i++){
       questionBank.push(data.list[i]);
     }
+    shuffle(questionBank);
+    numberOfQuestions = questionBank.length;
+    displayQuestion();
+  })//getJSON
+  */
+
+  $.getJSON('buoy.json', function(data) {
+    buoys = data.list;
+
+    var question = new Object();
+    question.type = "buoy";
+    question.question = "lightText";
+    question.answer = "simple";
+    question.buoy = 1;
+
+    questionBank.push(question);
+
+    var question = new Object();
+    question.type = "buoy";
+    question.question = "lightPicture";
+    question.answer = "simple";
+    question.buoy = 1;
+
+    questionBank.push(question);
+
+    var question = new Object();
+    question.type = "buoy";
+    question.question = "name";
+    question.answer = "simple";
+    question.buoy = 1;
+
+    questionBank.push(question);
+
     shuffle(questionBank);
     numberOfQuestions = questionBank.length;
     displayQuestion();
@@ -37,6 +69,8 @@ $(document).ready(function() {
       displayLightQuestion(question);
     }else if (question.type == "fog") {
       displayFogQuestion(question);
+    }else if (question.type == "buoy") {
+      displayBuoyQuestion(question);
     }
   }
 
@@ -54,6 +88,8 @@ $(document).ready(function() {
       displayLightAnswer(question, correct, answers);
     }else if (question.type == "fog") {
       displayFogAnswer(question, correct, answers);
+    }else if (question.type == "buoy") {
+      displayBuoyAnswer(question, correct, answers);
     }
   }
 
@@ -254,6 +290,84 @@ $(document).ready(function() {
         }
       }
       $(stage).append('<div class = "answerText">' +answerString+'</div>')
+    }
+
+    $(stage).append('<div class = "submit">Næste</div>');
+
+    $('.submit').click(function(){
+      changeQuestion()
+    });
+  }
+
+  /*
+  *     BUOY QUESTION
+  */
+
+  function displayBuoyQuestion(question){
+    window.scrollTo(0,0);
+    var rnd;
+
+    $(stage).append('<div class = "questionText">' + "Vælg det"+'</div>')
+
+    var buoy = buoys[question.buoy];
+
+    if(question.question == "name"){
+      $(stage).append('<div class = "questionTextCenter">' + buoy.name +'</div>')
+    }
+    if(question.question == "lightText"){
+      rnd = Math.random() * buoy.lightText.length;
+      rnd = Math.floor(rnd);
+      $(stage).append('<div class = "questionTextCenter", margin:auto>' + buoy.lightText[rnd] +'</div>')
+    }
+    if(question.question == "lightPicture"){
+      rnd = Math.random() * buoy.lightPicture.length;
+      rnd = Math.floor(rnd);
+      $(stage).append('<div id= "pix" class = "pixSelectAnswer"><img class="sticky" src="img/boje/'+buoy.lightPicture[rnd]+'"></div>')
+    }
+
+    $(stage).append('<div class = "questionText">' + "passer med:"+'</div>')
+
+    if(question.answer == "simple"){
+      for(i=0 ; i < 12 ; i++){
+        $(stage).append('<div id= "'+i+'" class = "pixSelect"><img src="img/boje/'+buoys[i].simplePicture+'"></div>')
+      }
+
+      $('.pixSelect').click(function(){
+        var correctAnswers = false;
+        if(this.id == ""+question.buoy){
+          correctAnswers = true;
+        }
+        submitFunction(correctAnswers, [this.id, rnd]);
+      });
+    }
+  }
+
+  function displayBuoyAnswer(question, correct, answers){
+    var buoy = buoys[question.buoy];
+    var rnd = answers[1];
+
+    if(question.question == "name"){
+      $(stage).append('<div class = "questionTextCenter">' + buoy.name +'</div>')
+    }
+    if(question.question == "lightText"){
+      $(stage).append('<div class = "questionTextCenter", margin:auto>' + buoy.lightText[rnd] +'</div>')
+    }
+    if(question.question == "lightPicture"){
+      $(stage).append('<div id= "pix" class = "pixSelectAnswer"><img class="sticky" src="img/boje/'+buoy.lightPicture[rnd]+'"></div>')
+    }
+
+    $(stage).append('<div class = "questionText">' + "passer med:"+'</div>')
+
+    if(question.answer == "simple"){
+      $(stage).append('<div id= "pixSelectAnswer" class = "pixSelectAnswer"><img  class="sticky" src="img/boje/'+buoy.simplePicture+'"></div>')
+    }
+
+    if (!correct) {
+      $(stage).append('<div class = "questionText">' +"Du svarede:"+'</div>')
+
+      if(question.answer == "simple"){
+        $(stage).append('<div id= "pixSelectAnswer2" class = "pixSelectAnswer"><img  class="sticky" src="img/boje/'+buoys[answers[0]].simplePicture+'"></div>')
+      }
     }
 
     $(stage).append('<div class = "submit">Næste</div>');

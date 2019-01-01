@@ -32,6 +32,12 @@ html, body {
   color: #FFF;
 }
 
+.questionTextCenter{
+  font-size: 27px;
+  color: #FFF;
+  text-align: center;
+}
+
 .answerText{
   font-size: 22px;
   color: #FFF;
@@ -119,6 +125,43 @@ html, body {
 }
 
 .pix img.sticky{
+  width: 100%;
+  height: 100%;
+}
+
+.pixSelect{
+  width: 22%;
+  height: auto;
+  margin: 10px;
+  border: 2px solid white;
+  background-color: #cecece;
+  top: 0px;
+  float: left;
+}
+
+.pixSelect img{
+  width: 100%;
+  height: 100%;
+}
+
+.pixSelect:hover{
+  border:#FC0 solid 2px;
+  color:#FC0;
+}
+
+.pixSelectAnswer{
+  width: 40%;
+  height: auto;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid white;
+  position: sticky;
+  top: 0px;
+  background-color: #cecece;
+}
+
+.pixSelectAnswer img{
   width: 100%;
   height: 100%;
 }
