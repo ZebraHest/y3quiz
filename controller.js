@@ -13,34 +13,27 @@ $(document).ready(function() {
   var buoys = new Array();
 
   var lightList = new Array();
-  var fogList = new ArrayList();
+  var fogList = new Array();
+  var soundList = new Array();
+  var buoyList = new Array();
 
 
   $.getJSON('lightQuestion.json', function(data) {
     for(i=0; i < data.list.length; i++){
-      questionBank.push(data.list[i]);
+      lightList.push(data.list[i]);
     }
-    shuffle(questionBank);
-    numberOfQuestions = questionBank.length;
-    //displayQuestion();
   })//getJSON
 
   $.getJSON('fogQuestion.json', function(data) {
     for(i=0; i < data.list.length; i++){
-      questionBank.push(data.list[i]);
+      fogList.push(data.list[i]);
     }
-    shuffle(questionBank);
-    numberOfQuestions = questionBank.length;
-  //  displayQuestion();
   })//getJSON
 
   $.getJSON('soundQuestion.json', function(data) {
     for(i=0; i < data.list.length; i++){
-      questionBank.push(data.list[i]);
+      soundList.push(data.list[i]);
     }
-    shuffle(questionBank);
-    numberOfQuestions = questionBank.length;
-    displayQuestion();
   })//getJSON
 
   $.getJSON('buoy.json', function(data) {
@@ -53,7 +46,7 @@ $(document).ready(function() {
       question.answer = "simple";
       question.buoy = i;
 
-      questionBank.push(question);
+      buoyList.push(question);
 
       var question = new Object();
       question.type = "buoy";
@@ -61,7 +54,7 @@ $(document).ready(function() {
       question.answer = "simple";
       question.buoy = i;
 
-      questionBank.push(question);
+      buoyList.push(question);
 
       var question = new Object();
       question.type = "buoy";
@@ -69,12 +62,9 @@ $(document).ready(function() {
       question.answer = "simple";
       question.buoy = i;
 
-      questionBank.push(question);
+      buoyList.push(question);
     }
-
-    shuffle(questionBank);
-    numberOfQuestions = questionBank.length;
-    displayQuestion();
+    displaySelection();
   })//getJSON
 
   function displayQuestion(){
@@ -168,28 +158,51 @@ $(document).ready(function() {
 
     $(stage).append('<div class = "spacer"></div>')
 
-    var selectList = ["Lanterner",
+    var selectNames = ["Lanterner",
                       "Bøjer",
                       "Tågesignaler",
                       "Manøvre- og advarselssignaler"];
 
-    $(stage).append('<label class="container">'+selection[i]+'<input type="checkbox" id = "select'+i+'"><span class="checkmark"></span></label>');
+    var selectLists = [lightList,
+                        buoyList,
+                        fogList,
+                        soundList];
 
+    for(i=0 ; i<selectNames.length; i++){
+      $(stage).append('<label class="container">'+selectNames[i]+" ("+selectLists[i].length+" spørgsmål)"+'<input type="checkbox" id = "select'+i+'"><span class="checkmark"></span></label>');
+    }
 
-    $(stage).append('<div class = "submit"> Svar </div>');
+    $(stage).append('<div class = "submit"> Start </div>');
 
     $('.submit').click(function(){
-      var correctAnswers = true;
-      var soundArray = new Array;
-      for(i=0 ; i<soundAnswers.length; i++){
-        var test = document.getElementById("soundAnswer"+i).checked;
-        soundArray[i] = test;
-        if (question.sound[i] !== test) {
-          correctAnswers = false;
+      for(i=0 ; i<selectNames.length; i++){
+        var test = document.getElementById("select"+i).checked;
+        if (test) {
+          pushToBank(selectLists[i]);
         }
       }
-      submitFunction(correctAnswers, soundArray)
+      numberOfQuestions = questionBank.length;
+      shuffle(questionBank);
+      if(stage == "#game1"){
+        stage2 = "#game1";
+        stage = "#game2";
+      }else{
+        stage2 = "#game2";
+        stage = "#game1";
+      }
+      displayQuestion();
+      $(stage2).animate({"right":"+=800px"} , "slow", function() {
+        $(stage2).css('right' , '-800px');
+        $(stage2).empty();
+      })
+      $(stage).animate({"right":"+=800px"} , "slow", function(){questionLock = false;});
     });
+  }
+
+  function pushToBank(list){
+    for(j=0; j < list.length; j++){
+      questionBank.push(list[j]);
+    }
   }
 
   /*
