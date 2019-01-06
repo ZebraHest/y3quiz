@@ -9,16 +9,20 @@ $(document).ready(function() {
   var lightAnswers = ["et maskindrevet skib","et maskindrevet skib, der slæber","et maskindrevet skib, der slæber, og slæbet er over 200 m","et sejlskib","beskæftiget med trawlfiskeri","beskæftiget med fiskeri, bortset fra trawlfiskeri","ikke under kommando","begrænset i sin manøvreevne","hæmmet af sin dybgang","beskæftiget med lodstjeneste","en ankerligger","stødt på grund","beskæftiget med minerydning","beskæftiget med uddybningsarbejde","let","gør fart gennem vandet","under 50 m i længde","set mod dets styrbords side","set mod dets bagbords side","set ret for fra","set agter fra"];
   var fogSoundAnswers = ["-", "--", "-..", "-...", "..-", "....","Klokke, 5 sek", "Klokke 5 sek + gongong 5 sek"];
   var fogPeriodAnswers = ["1 min", "2 min"];
+  var soundAnswers = [".", "..", "...", "-", "--", "--.", "--..", "-.-.", "..-", "....."];
   var buoys = new Array();
 
-  /*
+  var lightList = new Array();
+  var fogList = new ArrayList();
+
+
   $.getJSON('lightQuestion.json', function(data) {
     for(i=0; i < data.list.length; i++){
       questionBank.push(data.list[i]);
     }
     shuffle(questionBank);
     numberOfQuestions = questionBank.length;
-  //  displayLightQuestion();
+    //displayQuestion();
   })//getJSON
 
   $.getJSON('fogQuestion.json', function(data) {
@@ -27,36 +31,46 @@ $(document).ready(function() {
     }
     shuffle(questionBank);
     numberOfQuestions = questionBank.length;
+  //  displayQuestion();
+  })//getJSON
+
+  $.getJSON('soundQuestion.json', function(data) {
+    for(i=0; i < data.list.length; i++){
+      questionBank.push(data.list[i]);
+    }
+    shuffle(questionBank);
+    numberOfQuestions = questionBank.length;
     displayQuestion();
   })//getJSON
-  */
 
   $.getJSON('buoy.json', function(data) {
     buoys = data.list;
 
-    var question = new Object();
-    question.type = "buoy";
-    question.question = "lightText";
-    question.answer = "simple";
-    question.buoy = 1;
+    for(i=0 ; i < buoys.length ; i++){
+      var question = new Object();
+      question.type = "buoy";
+      question.question = "lightText";
+      question.answer = "simple";
+      question.buoy = i;
 
-    questionBank.push(question);
+      questionBank.push(question);
 
-    var question = new Object();
-    question.type = "buoy";
-    question.question = "lightPicture";
-    question.answer = "simple";
-    question.buoy = 1;
+      var question = new Object();
+      question.type = "buoy";
+      question.question = "lightPicture";
+      question.answer = "simple";
+      question.buoy = i;
 
-    questionBank.push(question);
+      questionBank.push(question);
 
-    var question = new Object();
-    question.type = "buoy";
-    question.question = "name";
-    question.answer = "simple";
-    question.buoy = 1;
+      var question = new Object();
+      question.type = "buoy";
+      question.question = "name";
+      question.answer = "simple";
+      question.buoy = i;
 
-    questionBank.push(question);
+      questionBank.push(question);
+    }
 
     shuffle(questionBank);
     numberOfQuestions = questionBank.length;
@@ -71,6 +85,8 @@ $(document).ready(function() {
       displayFogQuestion(question);
     }else if (question.type == "buoy") {
       displayBuoyQuestion(question);
+    }else if (question.type == "sound") {
+      displaySoundQuestion(question);
     }
   }
 
@@ -90,6 +106,8 @@ $(document).ready(function() {
       displayFogAnswer(question, correct, answers);
     }else if (question.type == "buoy") {
       displayBuoyAnswer(question, correct, answers);
+    }else if (question.type == "sound") {
+      displaySoundAnswer(question, correct, answers);
     }
   }
 
@@ -137,6 +155,41 @@ $(document).ready(function() {
 
     $(stage).append('<div class="questionText">You have finished the quiz!<br><br>Total questions: '+numberOfQuestions+'<br>Correct answers: '+score+'</div>');
 
+  }
+
+  /*
+  * SELECTION FRAME
+  */
+
+  function displaySelection(){
+    window.scrollTo(0,0);
+
+    $(stage).append('<div class = "questionText">' + "Hvilke spørgsmål ønsker du at træne. "+'</div>')
+
+    $(stage).append('<div class = "spacer"></div>')
+
+    var selectList = ["Lanterner",
+                      "Bøjer",
+                      "Tågesignaler",
+                      "Manøvre- og advarselssignaler"];
+
+    $(stage).append('<label class="container">'+selection[i]+'<input type="checkbox" id = "select'+i+'"><span class="checkmark"></span></label>');
+
+
+    $(stage).append('<div class = "submit"> Svar </div>');
+
+    $('.submit').click(function(){
+      var correctAnswers = true;
+      var soundArray = new Array;
+      for(i=0 ; i<soundAnswers.length; i++){
+        var test = document.getElementById("soundAnswer"+i).checked;
+        soundArray[i] = test;
+        if (question.sound[i] !== test) {
+          correctAnswers = false;
+        }
+      }
+      submitFunction(correctAnswers, soundArray)
+    });
   }
 
   /*
@@ -368,6 +421,72 @@ $(document).ready(function() {
       if(question.answer == "simple"){
         $(stage).append('<div id= "pixSelectAnswer2" class = "pixSelectAnswer"><img  class="sticky" src="img/boje/'+buoys[answers[0]].simplePicture+'"></div>')
       }
+    }
+
+    $(stage).append('<div class = "submit">Næste</div>');
+
+    $('.submit').click(function(){
+      changeQuestion()
+    });
+  }
+
+  /*
+  *     SOUND QUESTION
+  */
+
+  function displaySoundQuestion(question){
+    window.scrollTo(0,0);
+
+    $(stage).append('<div class = "questionText">' + "Angiv ved afkrydsning hvilket manøvre- eller advarselssignal der skal afgives. "+'</div>')
+
+    $(stage).append('<div class = "spacer"></div>')
+
+    $(stage).append('<div class = "answerText">' + question.description +'</div>')
+
+    $(stage).append('<div class = "smallQuestionText">' + "Signal:" +'</div>')
+
+    for(i=0 ; i<soundAnswers.length; i++){
+      $(stage).append('<label class="container">'+soundAnswers[i]+'<input type="checkbox" id = "soundAnswer'+i+'"><span class="checkmark"></span></label>');
+    }
+
+    $(stage).append('<div class = "submit"> Svar </div>');
+
+    $('.submit').click(function(){
+      var correctAnswers = true;
+      var soundArray = new Array;
+      for(i=0 ; i<soundAnswers.length; i++){
+        var test = document.getElementById("soundAnswer"+i).checked;
+        soundArray[i] = test;
+        if (question.sound[i] !== test) {
+          correctAnswers = false;
+        }
+      }
+      submitFunction(correctAnswers, soundArray)
+    });
+  }
+
+  function displaySoundAnswer(question, correct, answers){
+
+    $(stage).append('<div class = "answerText">' +question.description+'</div>')
+    $(stage).append('<div class = "questionText">' +"Svar:"+'</div>')
+
+    var answerCorrect = "";
+    for(i=0 ; i<soundAnswers.length; i++){
+      if (question.sound[i]) {
+        answerCorrect += soundAnswers[i];
+      }
+    }
+    $(stage).append('<div class = "answerText">' +answerCorrect+'</div>')
+
+    if (!correct) {
+      $(stage).append('<div class = "questionText">' +"Du svarede:"+'</div>')
+      var answerString = "";
+      for(i=0 ; i<soundAnswers.length; i++){
+        if (answers[i]) {
+          answerString += soundAnswers[i];
+        }
+      }
+      $(stage).append('<div class = "answerText">' +answerString+'</div>')
     }
 
     $(stage).append('<div class = "submit">Næste</div>');

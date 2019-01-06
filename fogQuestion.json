@@ -64,6 +64,13 @@
   },
   {
     "type":"fog",
+    "description": "Et skib til ankers, som er under 100 m i længde.",
+    "sound":[false, false, false, false,
+            false, false, true, false],
+    "period":[true, false]
+  },
+  {
+    "type":"fog",
     "description": "Sejlskib, der er let.",
     "sound":[false, false, true, false,
             false, false, false, false],

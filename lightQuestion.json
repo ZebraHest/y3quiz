@@ -165,9 +165,9 @@
     "answerList":[false, false, false, false, true,
                   false, false, false, false, false,
                   false, false, false, false, false,
-                  true, true, true, false, false,
+                  true, true, false, true, false,
                   false],
-    "description":"Beskæftiget med trawlfiskeri, gør fart gennem vandet, under 50 m i længde, set mod dets styrbords side"
+    "description":"Beskæftiget med trawlfiskeri, gør fart gennem vandet, under 50 m i længde, set mod dets bagbords side"
   },
   {
     "type":"light",
@@ -183,7 +183,7 @@
     "type":"light",
     "picture": "Slide19.png",
     "answerList":[false, false, false, false, false,
-                  true, true, false, false, false,
+                  true, false, false, false, false,
                   false, false, false, false, false,
                   false, false, false, false, false,
                   false],
@@ -332,12 +332,12 @@
   {
     "type":"light",
     "picture": "Slide34.png",
-    "answerList":[false, false, false, false, false,
+    "answerList":[true, false, false, false, false,
                   false, false, false, false, false,
                   false, false, false, true, false,
                   true, false, false, false, false,
                   true],
-    "description":"beskæftiget med uddybningsarbejde, gør fart gennem vandet, set agter fra"
+    "description":"et maskindrevet skib, beskæftiget med uddybningsarbejde, gør fart gennem vandet, set agter fra"
   },
   {
     "type":"light",

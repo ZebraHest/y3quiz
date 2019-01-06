@@ -1,0 +1,69 @@
+{"list":[
+  {
+    "type":"sound",
+    "description": "Maskindrevet skib, der drejer til styrbord",
+    "sound":[true, false, false, false, false,
+            false, false, false, false, false]
+  },
+  {
+    "type":"sound",
+    "description": "Maskindrevet skib, der drejer til bagbord",
+    "sound":[false, true, false, false, false,
+            false, false, false, false, false]
+  },
+  {
+    "type":"sound",
+    "description": "Maskindrevet skib, hvis maskine går bak",
+    "sound":[false, false, true, false, false,
+            false, false, false, false, false]
+  },
+  {
+    "type":"sound",
+    "description": "Skib, der nærmer sig en krumning i et løb, hvor andre skibe kan være skult",
+    "sound":[false, false, false, true, false,
+            false, false, false, false, false]
+  },
+  {
+    "type":"sound",
+    "description": "\"Mit skib ligger stoppet uden at gøre fart gennem vandet\"",
+    "sound":[false, false, false, false, true,
+            false, false, false, false, false]
+  },
+  {
+    "type":"sound",
+    "description": "Skib, der i et snævert løb vil overhale et andet skib på dettes styrbord side",
+    "sound":[false, false, false, false, false,
+            true, false, false, false, false]
+  },
+  {
+    "type":"sound",
+    "description": "Skib, der i et snævert løb vil overhale et andet skib på dettes bagbord side",
+    "sound":[false, false, false, false, false,
+            false, true, false, false, false]
+  },
+  {
+    "type":"sound",
+    "description": "Skib, der i et snævert løb samtykker til at blive overhalet og træffer forholdsregler til at tillade passage",
+    "sound":[false, false, false, false, false,
+            false, false, true, false, false]
+  },
+  {
+    "type":"sound",
+    "description": "\"De stævner mod fare\"",
+    "sound":[false, false, false, false, false,
+            false, false, false, true, false]
+  },
+  {
+    "type":"sound",
+    "description": "Skib, der ikke forstår et andet skibs hensigter",
+    "sound":[false, false, false, false, false,
+            false, false, false, false, true]
+  },
+  {
+    "type":"sound",
+    "description": "Skib, der i snævert løb er ved at blive overhalet, men som er i tvivl om, hvorvidt sikker passage kan finde sted",
+    "sound":[false, false, false, false, false,
+            false, false, false, false, true]
+  }
+]
+}
